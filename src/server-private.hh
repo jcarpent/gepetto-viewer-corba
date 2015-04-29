@@ -26,7 +26,7 @@ namespace graphics
 	~Server ();
 
 	/// \brief Create and activate the Corba servers.
-	void createAndActivateServers (graphics::corbaServer::Server* server);
+	void createAndActivateServers ();
 
       private:
 	CORBA::ORB_var orb_;

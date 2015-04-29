@@ -13,8 +13,8 @@ namespace graphics {
   namespace corbaServer {
     namespace impl {
 
-      GraphicalInterface::GraphicalInterface (corbaServer::Server* server) :
-	windowManagers_ (), nodes_ (), groupNodes_ (), server_ (server),
+      GraphicalInterface::GraphicalInterface () :
+	windowManagers_ (), nodes_ (), groupNodes_ (),
 	mtx_ (), rate_ (20), newNodeConfigurations_ ()
       {
       }

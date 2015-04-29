@@ -38,9 +38,9 @@ namespace graphics
       }
 
       void
-      Server::createAndActivateServers (corbaServer::Server* inServer)
+      Server::createAndActivateServers ()
       {
-	graphicalInterfaceServant_ = new GraphicalInterface (inServer);
+	graphicalInterfaceServant_ = new GraphicalInterface ();
 	graphicalInterfaceServantid_ = poa_->activate_object(graphicalInterfaceServant_);
       }
 

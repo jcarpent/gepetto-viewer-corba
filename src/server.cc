@@ -13,6 +13,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "server.hh"
+#include <unistd.h>
 
 #include "server-private.hh"
 
@@ -100,7 +101,7 @@ namespace graphics
 	("child", PortableServer::POAManager::_nil(), policyList);
       // Destroy policy object
       threadPolicy->destroy();
-      private_->createAndActivateServers(this);
+      private_->createAndActivateServers();
     }
 
     void Server::startCorbaServer()

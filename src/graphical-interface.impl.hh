@@ -52,7 +52,6 @@ private:
     WindowManagers_t windowManagers_;
     std::map<std::string, NodePtr_t> nodes_;
     std::map<std::string, GroupNodePtr_t> groupNodes_;
-    corbaServer::Server* server_;
     boost::mutex mtx_;
     int rate_;
     std::list<NodeConfiguration> newNodeConfigurations_;
@@ -67,6 +66,7 @@ private:
     void addNode(const std::string& nodeName, NodePtr_t node);
     void addGroup(const std::string& groupName, GroupNodePtr_t group);
     void threadRefreshing(WindowManagerPtr_t window);
+    void threadRefreshing();
     static osgQuat corbaConfToOsgQuat(const double* configurationCorba);
     static osgVector3 corbaConfToOsgVec3(const double* configurationCorba);
 
@@ -76,7 +76,7 @@ public:
     /**
         \brief Default constructor
         */
-    GraphicalInterface (corbaServer::Server* server);
+    GraphicalInterface ();
 
   virtual void getNodeList() throw (Error);
   virtual void getWindowList() throw (Error);
