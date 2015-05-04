@@ -7,6 +7,7 @@
 //
 
 #include <gepetto/viewer/corba/client.hh>
+#include <unistd.h>
 
 int main(int, const char **)
 {
@@ -25,7 +26,6 @@ int main(int, const char **)
     ClientCpp::WindowID windowId = client.createWindow("window1");
     client.createScene("scene1");
     client.addSceneToWindow("scene1",windowId);
-    client.addURDF("scene1/hrp2", "/local/mgeisert/devel/src/hrp2/hrp2_14_description/urdf/hrp2_14_capsule.urdf", "/local/mgeisert/devel/src/hrp2/");
 
     sleep(5);
 
@@ -38,13 +38,6 @@ int main(int, const char **)
     client.addTriangleFace("scene1/triangle", pos1, pos2, pos3, color);
 
     sleep(15);
-
-
-    client.applyConfiguration("scene1/hrp2/RLEG_LINK0", position1);
-    client.applyConfiguration("scene1/hrp2/RLEG_LINK1", position2);
-    client.applyConfiguration("scene1/hrp2/LLEG_LINK1", position3);
-    client.applyConfiguration("scene1/hrp2/LLEG_LINK2", position4);
-    client.applyConfiguration("scene1/hrp2/BODY", position5);
 
     client.refresh();
 
