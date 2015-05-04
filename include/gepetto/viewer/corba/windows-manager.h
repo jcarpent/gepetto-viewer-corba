@@ -69,7 +69,7 @@ namespace graphics {
               \brief Default constructor
               */
             WindowsManager ();
-            WindowID addWindow (std::string winName, WindowManagerPtr_t newWindow);
+            WindowID addWindow (const std::string & winName, WindowManagerPtr_t newWindow);
 
         public:
             static WindowsManagerPtr_t create ();

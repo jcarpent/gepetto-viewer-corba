@@ -43,7 +43,7 @@ namespace graphics {
     {
     }
 
-    WindowsManager::WindowID WindowsManager::addWindow (std::string winName,
+    WindowsManager::WindowID WindowsManager::addWindow (const std::string & winName,
             WindowManagerPtr_t newWindow)
     {
         WindowID windowId = windowManagers_.size ();
