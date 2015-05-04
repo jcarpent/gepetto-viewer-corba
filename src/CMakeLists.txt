@@ -121,10 +121,12 @@ INSTALL (FILES ${CMAKE_CURRENT_BINARY_DIR}/graphical-interface.hh
 # Standalone corba server
 ADD_EXECUTABLE (gepetto-viewer-server corbaserver.cc)
 TARGET_LINK_LIBRARIES(gepetto-viewer-server ${LIBRARY_NAME})
+PKG_CONFIG_USE_DEPENDENCY(gepetto-viewer-server omniORB4)
 #TARGET_LINK_LIBRARIES(gepetto-viewer-server ${Boost_LIBRARIES})
 
 ADD_EXECUTABLE (client-test test-client-cpp.cc)
 TARGET_LINK_LIBRARIES(client-test ${LIBRARY_NAME})
 PKG_CONFIG_USE_DEPENDENCY(client-test gepetto-viewer)
+PKG_CONFIG_USE_DEPENDENCY(client-test omniORB4)
 
 INSTALL (TARGETS gepetto-viewer-server DESTINATION bin)
