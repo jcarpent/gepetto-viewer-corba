@@ -39,6 +39,7 @@ ADD_LIBRARY(${LIBRARY_NAME}
   client-cpp.cc
   ${CMAKE_CURRENT_BINARY_DIR}/gepetto/corbaserver/graphical-interface_idl.py
   ${CMAKE_CURRENT_BINARY_DIR}/gepetto/viewer/corba/graphical-interface.hh
+  ${${PROJECT_NAME}_HEADERS}
 )
 
 PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} omniORB4)

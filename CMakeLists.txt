@@ -30,11 +30,11 @@ SET(PROJECT_DESCRIPTION "Corba server for gepetto-viewer")
 SET(PROJECT_URL "")
 
 SET(${PROJECT_NAME}_HEADERS
-  include/gepetto/viewer/corba/windows-manager.h
-  include/gepetto/viewer/corba/server.hh
-  include/gepetto/viewer/corba/client.hh
-  include/gepetto/viewer/corba/se3.hh
-  include/gepetto/viewer/corba/fwd.hh
+  ${CMAKE_SOURCE_DIR}/include/gepetto/viewer/corba/windows-manager.h
+  ${CMAKE_SOURCE_DIR}/include/gepetto/viewer/corba/server.hh
+  ${CMAKE_SOURCE_DIR}/include/gepetto/viewer/corba/client.hh
+  ${CMAKE_SOURCE_DIR}/include/gepetto/viewer/corba/se3.hh
+  ${CMAKE_SOURCE_DIR}/include/gepetto/viewer/corba/fwd.hh
   )
 
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
